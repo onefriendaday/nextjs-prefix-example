@@ -8,7 +8,7 @@ const handle = app.getRequestHandler()
 
 app.prepare().then(() => {
     server.use((req,res, next) => {
-        req.url = req.originalUrl.replace('blog/_next', '_next');
+        req.url = req.originalUrl.replace('blog/', '');
         next();
     });
 

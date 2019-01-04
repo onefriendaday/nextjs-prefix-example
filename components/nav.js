@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import PrefixedLink from './prefixed_link'
 
 const links = [
   { href: 'https://github.com/segmentio/create-next-app', label: 'Github' }
@@ -14,7 +15,9 @@ const Nav = () => (
       <li>
         <Link prefetch href="/">
           <a>Home</a>
-        </Link>
+        </Link> | 
+        <PrefixedLink href="/hello" label="Hello">
+        </PrefixedLink>
       </li>
       <ul>
         {links.map(({ key, href, label }) => (
